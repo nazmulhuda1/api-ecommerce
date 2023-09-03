@@ -1,7 +1,20 @@
 
+let cartMenu = document.querySelector('#cart_menu');
+let cartProduct = document.querySelector('.cart_products');
+let closeIcon = document.querySelector('.close_icon');
+
+cartMenu.onclick = () => {
+    cartProduct.classList.toggle('active')
+}
+closeIcon.onclick = () => {
+    cartProduct.classList.remove('active')
+}
 
 
-console.log('hellow')
+
+
+
+// =============================
 const data = async () => {
     const res = await fetch('https://fakestoreapi.com/products');
     const data = await res.json();
@@ -12,7 +25,7 @@ const data = async () => {
 
 
     products?.forEach(item => {
-        console.log(item)
+        // console.log(item)
         const div = document.createElement('div')
         div.classList.add('single_item')
         div.innerHTML = `
@@ -32,5 +45,10 @@ const data = async () => {
         productContainer.appendChild(div)
     });
 
+
+
+
+
 }
 data()
+

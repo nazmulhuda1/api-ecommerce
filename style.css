@@ -22,6 +22,134 @@ img {
 }
 
 /* ========================= */
+.header_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.header-sectoin {
+    padding: 20px 5%;
+    position: relative;
+}
+
+a.logo {
+    color: #000;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: ui-monospace;
+}
+
+a.logo span {
+    color: #d11bd1;
+}
+
+.right-btn i {
+    color: #d11bd1;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ========================= */
+.cart_products.active {
+    display: block;
+    transition: 0.5s;
+}
+
+.cart_products {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10001;
+    background: #fff;
+    min-height: 400px;
+    width: 350px;
+    padding: 50px 15px;
+    box-shadow: 0px 3px 15px #666;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 10px 0 15px;
+}
+
+.box img {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.cart_products h2 {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 7px;
+}
+
+.cart_products h2 {
+    color: #333;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 7px;
+}
+
+.cart_info h3 {
+    color: #555;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.price {
+    color: #444;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.price_info {
+    margin-top: 40px;
+    background: rgb(209, 27, 209);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.price_info h3 {
+    font-size: 25px;
+}
+
+.close_icon {
+    position: absolute;
+    top: 14px;
+    right: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.close_icon i {
+    font-size: 20px;
+    padding: 10px;
+    background: #f8f8f8;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.close_icon i:hover {
+    box-shadow: 0px 0px 2px #b0aeae;
+}
+
+/* ========================= */
 .banner_section {
     background-image: url(./img//banner_img.jpg);
     background-position: center;
@@ -29,8 +157,11 @@ img {
     object-fit: cover;
     height: 400px;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     color: #fff;
+    width: 100%;
+    background-attachment: fixed;
+
 }
 
 .banner_section::before {
